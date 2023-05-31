@@ -30,8 +30,33 @@ class TodoListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Center(
-        child: Text('リスト一覧画面'),
+      appBar: AppBar(
+        title: const Text('リスト一覧'),
+      ),
+      // ListViewを使いリスト一覧を表示
+      body: ListView(
+        children: const <Widget>[
+          Card(
+            child: ListTile(
+              title: Text('買うものリスト'),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: Text('ジャガイモ'),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: Text('人参'),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: Text('玉ねぎ'),
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
